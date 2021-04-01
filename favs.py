@@ -26,7 +26,7 @@ def del_fav(title):
 
 while True:
     
-    response = input('v to visit favourites, ls for list, add for new, d to delet, q to quit: ')
+    response = input('Hello boss, please type\n v to launch your website\n l to show all your favs\n + to add a new fav\n - to remove a fav\n q to quit\n so what is it going to be?  ')
     
     if response == 'v':
         print('Loading....')
@@ -38,18 +38,18 @@ while True:
         except:
             print('Website unavailable')
             
-    elif response == 'ls':
-        print('Listing....')
+    elif response == 'l':
+        print('Showing....')
         print(get_favs())
         
-    elif response == 'add':
+    elif response == '+':
         destination = input('Where do you want this shortcut to go?: ')
         shortcut = input('What is the shortcut?: ')
         print('Adding....')
         add_fav(shortcut, destination)
         print('Done')
         
-    elif response == 'd':
+    elif response == '-':
         shortcut = input('What is the shortcut?: ')
         print('Deleting....')
         del_fav(shortcut)
